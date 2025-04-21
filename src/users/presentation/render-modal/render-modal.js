@@ -29,6 +29,7 @@ export const hideModal = () => {
 const setFormValues = (user) => {
     form.querySelector('[name="firstName"]').value = user.firstName;
     form.querySelector('[name="lastName"]').value = user.lastName;
+    form.querySelector('[name="gender"]').value = user.gender;
     form.querySelector('[name="balance"]').value = user.balance;
     form.querySelector('[name="isActive"]').checked = user.isActive;
     loadedUser = user;
@@ -76,7 +77,8 @@ export const renderModal = (element, saveUserCallback) => {
 
             userLike[key] = value;
         }
-
+        console.log(userLike);
+        
         await saveUserCallback(userLike);
         //console.log(userLike);
         hideModal();

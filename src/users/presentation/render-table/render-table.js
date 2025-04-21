@@ -14,6 +14,7 @@ const createTable = () => {
             <th>Sueldo</th>
             <th>Nombre</th>
             <th>Apellido</th>
+            <th>Genero</th>
             <th>¿Activo?</th>
             <th>Acciones</th>
         </tr>
@@ -77,6 +78,7 @@ export const renderTable = (element) => {
                 <td>${user.balance}</td>
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
+                <td>${user.gender}</td>
                 <td>${user.isActive}</td>
                 <td>
                     <a href="#/" class="Select-user" data-id=${user.id}>Select</a>

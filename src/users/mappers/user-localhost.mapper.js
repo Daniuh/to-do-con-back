@@ -19,8 +19,8 @@ export const userLocalhost = (user) => {
         isActive,
         balance,
         avatar,
-        first_name: firstName,
-        last_name: lastName,
+        firstName,
+        lastName,
         gender
     };
 }

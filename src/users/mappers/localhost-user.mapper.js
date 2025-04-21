@@ -11,8 +11,8 @@ export const localHostUserToModel = (localhostUser) => {
         isActive,
         balance,
         avatar,
-        first_name,
-        last_name,
+        firstName,
+        lastName,
         gender,
     } = localhostUser;
 
@@ -21,8 +21,8 @@ export const localHostUserToModel = (localhostUser) => {
         isActive,
         balance,
         avatar,
-        firstName: first_name,
-        lastName: last_name,
+        firstName,
+        lastName,
         gender,
     });
 }
