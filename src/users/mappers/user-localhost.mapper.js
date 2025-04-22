@@ -16,7 +16,7 @@ export const userLocalhost = (user) => {
 
     return {
         id,
-        isActive,
+        active: isActive,
         balance,
         avatar,
         firstName,

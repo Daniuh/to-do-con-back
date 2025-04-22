@@ -79,7 +79,7 @@ export const renderTable = (element) => {
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
                 <td>${user.gender}</td>
-                <td>${user.isActive}</td>
+                <td>${user.isActive ? 'Sí' : 'No'}</td>
                 <td>
                     <a href="#/" class="Select-user" data-id=${user.id}>Select</a>
                     |
