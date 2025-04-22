@@ -8,7 +8,7 @@ export const localHostUserToModel = (localhostUser) => {
 
     const {
         id,
-        isActive,
+        active,
         balance,
         avatar,
         firstName,
@@ -18,7 +18,7 @@ export const localHostUserToModel = (localhostUser) => {
 
     return new User({
         id,
-        isActive,
+        isActive: active,
         balance,
         avatar,
         firstName,
