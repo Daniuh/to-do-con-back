@@ -48,9 +48,16 @@ export const renderModal = (element, saveUserCallback) => {
 
     form = modal.querySelector('form');
 
+    const modalDialog = modal.querySelector('.modal-dialog');
+
     modal.addEventListener('click', (event) => {
-        if(event.target.className === 'modal-container' || event.target.className === 'span-x' || event.target.className === 'span-img'){
+        if(event.target.classList.contains('modal-container') || event.target.classList.contains('span-x') || event.target.classList.contains('span-img')){
+            modalDialog.classList.add('hide-animated');
+
+            setTimeout(() => {
             hideModal();
+            modalDialog.classList.remove('hide-animated');
+            }, 300);
         }
     });
 
