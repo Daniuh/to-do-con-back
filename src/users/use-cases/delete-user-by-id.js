@@ -7,7 +7,11 @@ export const deleteUserById =  async (id) => {
         method: 'DELETE',
     });
 
-    const deleteResult = await res.json();
-    console.log({deleteResult});
-    return deleteResult;
+    if (res.status !== 204 && res.headers.get('content-length') !== '0') {
+        const deleteResult = await res.json();
+        console.log({ deleteResult });
+        return deleteResult;
+    }
+
+    return { success: true };
 }
