@@ -15,8 +15,8 @@ const loadNextPage = async () => {
 }
 
 const loadPreviusPage = async () => {
+    if(state.currentPage === 0) return;
     const users = await loadUsersByPage(state.currentPage - 1);
-    if(state.currentPage === 1) return;
     
     state.currentPage -= 1;
     state.users = users;
@@ -64,5 +64,5 @@ export default {
     /**
      * @returns {number}
      */
-    getCurrentPage: () => state.currentPage,
+    getCurrentPage: () => state.currentPage + 1,
 }
